@@ -49,11 +49,11 @@ prediction = model(torch.tensor([hour], dtype=torch.float32)).item()
 print(f"{hour}시간을 공부할 경우, 합격 예상 확률은 {prediction*100:.01f}%입니다.")
 
 '''
-PyTorch에서는 nn.Module을 상속받아 모델을 정의합니다. 이 경우 BinaryClassifier 클래스를 만들었습니다.
-모델 내부에 nn.Linear 레이어를 사용하여 입력 크기 1, 출력 크기 1의 완전 연결 레이어를 정의했습니다. 그리고 nn.Sigmoid 활성화 함수를 사용했습니다.
-손실 함수로 nn.BCELoss를 사용했고, 최적화기로 optim.SGD를 사용했습니다.
-모델 학습 시 torch.from_numpy를 사용하여 NumPy 배열을 PyTorch 텐서로 변환했습니다.
-예측 시 model(torch.tensor([hour], dtype=torch.float32)).item()을 사용하여 예측 결과를 얻었습니다.
+1. PyTorch에서는 nn.Module을 상속받아 모델을 정의합니다. 이 경우 BinaryClassifier 클래스를 만들었습니다.
+2. 모델 내부에 nn.Linear 레이어를 사용하여 입력 크기 1, 출력 크기 1의 완전 연결 레이어를 정의했습니다. 그리고 nn.Sigmoid 활성화 함수를 사용했습니다.
+3. 손실 함수로 nn.BCELoss를 사용했고, 최적화기로 optim.SGD를 사용했습니다.
+4. 모델 학습 시 torch.from_numpy를 사용하여 NumPy 배열을 PyTorch 텐서로 변환했습니다.
+5. 예측 시 model(torch.tensor([hour], dtype=torch.float32)).item()을 사용하여 예측 결과를 얻었습니다.
 '''
 
 '''
